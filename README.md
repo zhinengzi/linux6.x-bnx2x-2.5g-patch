@@ -36,7 +36,7 @@ curl -L "https://raw.githubusercontent.com/zhinengzi/linux6.x-bnx2x-2.5g-patch/r
 echo "===> [SUCCESS] Linux6.x-Bnx2x-2.5G Patch injected successfully! <==="
 ```
 
-# **💻 Manual Compilation / 本地手动编译**
+## **💻 Manual Compilation / 本地手动编译**
 If you are compiling the Linux kernel or OpenWrt on a local Linux machine (Ubuntu/Debian):
 
 ```Bash
@@ -51,7 +51,7 @@ cd target/linux/x86/image/  # 如果是 OpenWrt 环境
 patch -p1 < ../../../../../../../linux6.x-bnx2x-2.5g.patch
 ```
 
-# Required OpenWrt .config Options
+## Required OpenWrt .config Options
 Make sure the bnx2x driver is selected as a built-in module or external kmod package:
 
 ```text
@@ -59,12 +59,12 @@ CONFIG_PACKAGE_kmod-bnx2x=y
 CONFIG_PACKAGE_pciutils=y
 ```
 
-# **📊 Verification / 实机验证**
-After booting into your system, run ethtool to verify the link speed:
+## **📊 Verification / 实机验证**
+After booting into your system, run `ethtool` to verify the link speed:
 
-'''Bash
+```bash
 ethtool ethX
-'''
+```
 
 ## **Expected Output:**
 <img width="1405" height="880" alt="98c6d265f32412e9d67cd65a00dddca0" src="https://github.com/user-attachments/assets/c656dd8d-4584-4300-a8ea-ade1d93a18b0" />
@@ -73,12 +73,12 @@ ethtool ethX
 
 
 
-# **🤝 Acknowledgments / 致谢**
+## **🤝 Acknowledgments / 致谢**
 JAMESMTL: For the original 2.5G warpcore logic that inspired the entire community.
 
 Arch Linux AUR Community: For maintaining and updating the dkms patch code for 6.x kernels.
 
 ImmortalWrt / OpenWrt Teams: For providing the greatest router operating system.
 
-# **📄 License**
+## **📄 License**
 This patch modifies the upstream Linux kernel driver and is therefore distributed under the GPL-2.0 License.
