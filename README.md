@@ -53,8 +53,8 @@ patch -p1 < ../../../../../../../linux6.x-bnx2x-2.5g.patch
 
 # Required OpenWrt .config Options
 Make sure the bnx2x driver is selected as a built-in module or external kmod package:
+
 ```text
-Plaintext
 CONFIG_PACKAGE_kmod-bnx2x=y
 CONFIG_PACKAGE_pciutils=y
 ```
