@@ -41,14 +41,14 @@ If you are compiling the Linux kernel or OpenWrt on a local Linux machine (Ubunt
 
 ```Bash
 # 1. 下载补丁并保存到当前目录（建议在 OpenWrt 或 Linux 源码的根目录下执行）
-curl -L "https://raw.githubusercontent.com/zhinengzi/linux6.x-bnx2x-2.5g-patch/refs/heads/main/999-linux6.x-bnx2x-2.5g.patch" -o bnx2x-2.5g.patch
+curl -L "https://raw.githubusercontent.com/zhinengzi/linux6.x-bnx2x-2.5g-patch/refs/heads/main/linux6.x-bnx2x-2.5g.patch" -o linux6.x-bnx2x-2.5g.patch
 
 # 2. 进入博通 bnx2x 驱动源码目录（请将下面的路径替换为你本地的实际绝对路径）
 cd target/linux/x86/image/  # 如果是 OpenWrt 环境
 # 或者内核环境: cd drivers/net/ethernet/broadcom/bnx2x/
 
 # 3. 跨目录调用刚刚下载的补丁进行缝合
-patch -p1 < ../../../../../../../bnx2x-2.5g.patch
+patch -p1 < ../../../../../../../linux6.x-bnx2x-2.5g.patch
 ```
 
 # Required OpenWrt .config Options
